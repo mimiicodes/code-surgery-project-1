@@ -1,0 +1,177 @@
+/* style.css*/
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Afacad Flux", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+}
+main{
+    background-image: url(./images/designer_1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: contain;
+}
+/* Navbar */
+nav{
+    color: hsl(240, 94%, 13%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: relative;
+    z-index: 1;
+}
+.logo{
+    font-size: 1.5rem;
+}
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul li a{
+    color: hsl(240, 94%, 13%);
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 10px;
+}
+ul li a:hover{
+    border-bottom: 2px solid hsl(240, 94%, 13%);
+    color: aqua;
+}
+ul li a.active {
+    border-bottom: 2px solid hsl(240, 94%, 13%);
+}
+.checkbtn{
+    font-size: 30px;
+    color: hsl(240, 94%, 13%);
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* navbar */
+
+
+/* buttons */
+button{
+    margin: 10px 10px 10px 0px;
+}
+.blue-btn{
+    border: 1.5px solid hsl(240, 94%, 13%);
+    background-color: hsl(240, 94%, 13%);
+    color: hsl(0, 0%, 100%);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Afacad Flux", sans-serif;
+    transition: 0.3s;
+}
+.blue-btn:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(240, 94%, 13%);
+}
+.white-btn{
+    border: 1.5px solid hsl(240, 94%, 13%);
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(240, 94%, 13%);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "Afacad Flux", sans-serif;
+    transition: 0.3s;
+}
+.white-btn:hover{
+    background-color: hsl(240, 94%, 13%);
+    color: hsl(0, 0%, 100%);
+}
+/* buttons */
+
+
+@media screen and (max-width: 768px){
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+    }
+  
+    ul{
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color: gray;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+  
+    ul li{
+        margin: 20px 0;
+    }
+  
+    ul li a{
+        font-size: 20px;
+    }
+  
+    #check:checked ~ ul{
+        right: 0;
+    }
+}
+
+/* hero section */
+.hero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+}
+.left-hero{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.left-hero{
+    width: 35%;
+}
+.right-hero{
+    width: 45%;
+}
+.right-hero{
+    position: relative;
+    top: -80px;
+    z-index: 2;
+}
+.right-hero-img{
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        justify-content: center;
+    }
+    .left-hero, .right-hero{
+        width: 100%;
+    }
+    .right-hero{
+        margin-top: -70px;
+    }
+    .right-hero-img{
+        width: 100%;
+    }
+}
