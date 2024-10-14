@@ -162,6 +162,9 @@ button{
 
 
 @media screen and (max-width: 768px){
+    header{
+        height: fit-content;
+    }
     .hero-section{
         display: flex;
         flex-wrap: wrap;
@@ -221,6 +224,9 @@ button{
 }
 
 @media screen and (max-width: 768px){
+    .padding{
+        padding: 50px 0 0 0;
+    }
     .first-section-left{
         width: 100%;
     }
